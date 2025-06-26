@@ -71,3 +71,34 @@ function removeNegativeNumbers(arr) {
 }
 console.log("8. Remove negative number:")
 console.log(removeNegativeNumbers([-5, 2, -1, 6, 0]));
+
+//test
+//01. Find the smallest number in an array
+function findSmallest(arr) {
+  return Math.min(...arr);
+}
+console.log("01. Smallest number[4, 2, 8, 1, 9]: "+ findSmallest([4, 2, 8, 1, 9]));
+
+
+//02. Return unique characters(removing duplicates) from a string
+function getUniqueCharacters(str) {
+  return [...new Set(str)].join('');
+}
+console.log("02. Unique characters((hello): "+ getUniqueCharacters("hello"));
+
+
+//03. Return the middle character of a string
+function getMiddleCharacter(str) {
+  let len = str.length;
+  let mid = Math.floor(len / 2);
+
+  if (len % 2 === 0) {
+    return str.slice(mid - 1, mid + 1);
+  } else {
+    return str.slice(mid, mid + 1);
+  }
+}
+console.log("03. Middle character (hello): "+ getMiddleCharacter("hello"));
+console.log("Middle character (book): "+ getMiddleCharacter("book"));
+
+
